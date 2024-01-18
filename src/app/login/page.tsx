@@ -85,7 +85,7 @@ export default function Login() {
   
                       <div className="text-sm leading-6">
                         <a href="/register" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                          Don't have an account? Click here
+                          Don&apos;t have an account? Click here
                         </a>
                       </div>
                     </div>
