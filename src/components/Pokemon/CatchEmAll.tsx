@@ -28,7 +28,7 @@ export default function CatchEmAll() {
         onClick={handleClick}
         disabled={caught}
       >
-        <Image className={`${caught ? 'animate-pulse' : ''}`} width={100} height={100} src={'/pokeball.png'} alt={'pokeball'} />
+        <Image className={`${caught ? 'animate-pulse' : ''}`} width={100} height={100} src={'/pokeball.webp'} alt={'pokeball'} />
       </motion.button>
     </div>
   );

@@ -25,7 +25,7 @@ export default async function Home() {
       <div className='text-center'>
         <CatchEmAll />
         <FormModal pokemon={pokemon} />
-        
+        <Timer />
         <Uppgrades/>
       </div>
       </div>

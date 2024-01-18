@@ -18,7 +18,7 @@ export default function Profile({stats}: {stats: Stats[]}) {
             <p className='text-xl'>Your Level is {stat.level}</p>
         </div>
         ))}
-        <Image priority className='m-auto' src={'/ash.png'} alt={'ash'} width={400} height={800}></Image>
+        <Image priority className='m-auto' src={'/ash.webp'} alt={'ash'} width={400} height={800}></Image>
         <button className='p-5 mb-4 text-slate-50 text-2xl bg-slate-500 rounded-md shadow-md' onClick={()=>signOut()}>Sign Out</button>
     </div>
   )

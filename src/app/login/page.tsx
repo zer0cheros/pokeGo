@@ -105,7 +105,7 @@ export default function Login() {
             </div>
           </div>
           <div className="relative hidden w-0 flex-1 lg:block">
-            <Image src={"/pok.jpg"} alt={"pok"} width={2000} height={1900}></Image>
+            <Image src={"/pok.webp"} alt={"pok"} width={2000} height={1900}></Image>
           </div>
         </div>
       </>
