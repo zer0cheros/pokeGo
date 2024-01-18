@@ -21,7 +21,7 @@ export async function POST(req: Request, res: Response,){
           },
           })
           try {
-            const updatedStats = await updateStats(user.id, body.credits || 1, body.base_experience );
+            const updatedStats = await updateStats(user.id, body.credits || 1, body.base_experience);
             console.log("Updated stats:", updatedStats);
             return new Response(JSON.stringify({ message: "Stats saved", updatedStats }));
           } catch (error) {
