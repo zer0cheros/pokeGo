@@ -1,13 +1,16 @@
 'use client'
 import React, {useState} from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Uppgrades() {
+  const router = useRouter()
     const [open, setOpen] = useState(false)
     const buy = async (id:string)=>{
         await fetch('/api/upgrades', {
             method: 'POST',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({id})})
+        router.refresh()
     }
   return (
     <div className={`absolute h-screen ${open ? 'w-64 justify-start' : 'w-10 justify-center'} text-4xl text-slate-50 flex items-center bg-slate-900 top-0 right-0`}>

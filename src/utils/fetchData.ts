@@ -25,10 +25,29 @@ export async function updateStats(userId:string, creditsIncrement:number, exp:nu
         update: { credits: { increment: creditsIncrement }, experience: { increment: exp }  },
         create: { userId, credits: 5, level: 1, experience: 0 },
       });
-  
+      if(result.experience >= 1250 * result.level){
+        await prisma.stats.update({
+          where: {
+            userId: userId,
+          },
+          data: {
+            level: { increment: 1 },
+          },
+        });
+      }
       return result;
     } catch (error) {
       console.error("Error updating stats:", error);
       throw error; // Re-throw the error for the caller to handle
     }
+  }
+
+  export async function getPokemons(id:string){
+    const pokemons = await prisma.pokemon.findMany({
+      where: {
+        authorId: id 
+      }
+      
+    })
+    return pokemons
   }

@@ -31,4 +31,6 @@ export type Stats = {
     experience: number;
     level: number;
     userId: string;
+    ultraball: number;
+    masterball:number;
 }
